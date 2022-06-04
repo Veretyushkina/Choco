@@ -1,0 +1,84 @@
+.reviews-section {
+    position: relative;
+
+&::before {
+    content: url("../../img/bg/Узор\ 2.png");
+    position: absolute;
+    bottom: rem(0px);
+    left: 0;
+}
+&::after {
+    content: url("../../img/bg/Ягоды\ 2.png");
+    position: absolute;
+    bottom: rem(35px);
+    left: 0;
+}
+}
+
+.reviews__display {
+    padding: rem(42px);
+    margin-bottom: rem(15px);
+    position: relative;
+    background:#F8FAF9 url("../../img/bg/малина\ 2.png") right top no-repeat;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: rem(90px);
+        height: rem(90px);
+        border-radius: 50%;
+        background: #fff;
+        left: 50%;
+        transform: translateX(-50%);
+        top: rem(-65px);
+
+    }
+}
+
+.reviews__display-inner {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.reviews__avatar {
+    height: rem(264px);
+    width: rem(254px);
+
+    @include tablets {
+        height: rem(130px);
+        width: rem(132px);
+    }
+}
+
+.reviews__avatar-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews__content {
+    flex: 1;
+    margin-left: rem(20px);
+}
+
+.reviews__title {
+    font-size: rem(30px);
+    font-weight: bold;
+    color: black;
+    margin-bottom: rem(12px);
+}
+
+.reviews__text {
+    margin-bottom: rem(25px);
+}
+
+.reviews__author {
+    color: black;
+}
