@@ -1,0 +1,64 @@
+.benefits {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.benefits-section {
+    position: relative;
+    background: url("../../img/bg/узор\ лист\ 1.png") left top 5% no-repeat;
+
+        @include phones {
+            background: none;
+        }
+
+        &:before {
+        content: url("../../img/bg/малина\ 1.png");
+        position: absolute;
+        bottom: rem(-80px);
+        left: 0;
+
+            @include phones {
+                display: none;
+            }
+}
+}
+
+
+.benefits__item {
+    flex: 1;
+    padding: 0 3%;
+    position: relative;
+
+    @include phones {
+        padding: 0;
+        margin-bottom: rem(31px);
+    }
+
+    &::before {
+        content: url("../../img/icons/bolls.png");
+        position: absolute;
+        top: rem(30px);
+        right: 0;
+        transform: translateX(50%);
+
+    @include phones {
+        display: none;
+    }
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    
+        &::before {
+            display: none;
+        }
+    }
+}
+
