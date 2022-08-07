@@ -1,0 +1,28 @@
+
+.product__ingredients {
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 12px 15px;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;   
+    border-radius: 4px;
+    background: #86C3D7;
+}
+
+.product__ingredients:hover > .product__ingredients-dropdown {
+    opacity: 1;
+}
+
+.product__ingredients-dropdown {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 273px;
+    border-radius: 4px;
+    background: #fff;
+    color: black;
+
+}
