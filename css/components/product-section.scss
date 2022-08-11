@@ -1,11 +1,30 @@
+.product-section {
+    background: #F8FAF9 url(../../img/bg/Узор\ на\ фоне\ 1.png) no-repeat right bottom rem(-214px);
+    position: relative;
+
+    &::before {
+        content: url(../../img/bg/Слой\ 1\ 1.png);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
 .product__container {
 display: flex;
+
+@include tablets {
+    flex-direction: column;
+}
+
 }
 
 .product__col-right {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .product__ingredients {
@@ -14,13 +33,54 @@ display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 90px;
-    height: 90px;
-    margin-bottom: 10px;   
-    border-radius: 4px;
+    width: rem(90px);
+    height: rem(90px);   
+    border-radius: rem(4px);
     background: #86C3D7;
     text-transform: uppercase;
     color: #fff;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+
+.product__title {
+    font-size: rem(36px);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+
+.product__desc-price {
+    font-size: rem(60px);
+}
+
+.product__col-right {
+    display: flex;
+    justify-content: center;
+
+}
+
+.product__desc-cell {
+    display:flex;
+    align-items: baseline;
+
+    @include tablets {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+}
+
+.product__desc-item {
+    margin-right: 10%;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .product__ingredients:hover > .product__ingredients-dropdown {
@@ -32,19 +92,28 @@ display: flex;
     position: absolute;
     top: 0;
     left: 100%;
-    width: 273px;
-    border-radius: 4px;
-    background: #fff;
+    width: rem(273px);
     color: black;
+    border-radius: rem(4px);
+
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rem(4px) rem(4px) rem(40px) rgb(0 0 0 / 6%);
+    backdrop-filter: blur(40px);
 }
 
-.dropdown__list {
-    margin: 5% 5%;
-}
 
-.dropdown__item {
+.product__inform {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: rem(400px);
+
+    @include tablets {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        
+    }
 }
