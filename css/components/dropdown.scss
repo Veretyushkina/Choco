@@ -1,0 +1,21 @@
+.dropdown__list {
+    margin: 5% 5%;
+}
+
+.dropdown__item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(10px);
+    margin-bottom: rem(10px);
+}
+
+.product-slider__arrows {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.product-slider__arrow {
+    display: flex;
+    align-items: center;
+}

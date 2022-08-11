@@ -1,76 +1,68 @@
 .reviews-section {
+    background:url(../../img/bg/Ягода-3\ 1.png) no-repeat right top;
     position: relative;
+    
+    &:before {
+content: url(../../img/bg/Узор\ 2.png);
+position: absolute;
+bottom: rem(-200px);
+z-index: 1;
+    }
 
-&::before {
-    content: url("../../img/bg/Узор\ 2.png");
-    position: absolute;
-    bottom: rem(0px);
-    left: 0;
+    &::after {
+        content: url(../../img/bg/Ягоды\ 2.png);
+position: absolute;
+bottom: rem(-100px);
+z-index: 1;
+    }
 }
-&::after {
-    content: url("../../img/bg/Ягоды\ 2.png");
-    position: absolute;
-    bottom: rem(35px);
-    left: 0;
-}
-}
+
 
 .reviews__display {
-    padding: rem(42px);
-    margin-bottom: rem(15px);
+    background:#F8FAF9 url(../../img/bg/малина\ 2.png) no-repeat right top;
+    padding: rem(40px) rem(35px);
+    margin-bottom: rem(20px);
     position: relative;
-    background:#F8FAF9 url("../../img/bg/малина\ 2.png") right top no-repeat;
     overflow: hidden;
 
-    &::before {
+    &::before{
         content: "";
-        position: absolute;
         display: block;
         width: rem(90px);
         height: rem(90px);
+        background: white;
         border-radius: 50%;
-        background: #fff;
+        position: absolute;
         left: 50%;
         transform: translateX(-50%);
         top: rem(-65px);
 
-    }
-}
 
-.reviews__item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transition: .3s;
-    opacity: 0;
+    }
+
 }
 
 .reviews__display-inner {
     display: flex;
 
+    
     @include tablets {
+        display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
-    }
+}
 }
 
 .reviews__avatar {
-    height: rem(264px);
-    width: rem(254px);
-
-    @include tablets {
-        height: rem(130px);
-        width: rem(132px);
-    }
+   width: rem(253px);
+   height: rem(264px); 
 }
 
 .reviews__avatar-img {
     object-fit: cover;
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 .reviews__content {
@@ -81,14 +73,56 @@
 .reviews__title {
     font-size: rem(30px);
     font-weight: bold;
-    color: black;
-    margin-bottom: rem(12px);
+    margin-bottom: rem(22px);
+
 }
 
 .reviews__text {
-    margin-bottom: rem(25px);
+    width: 90% ;
+    margin-bottom: rem(36px);
 }
 
 .reviews__author {
+    font-size: rem(18px);
+    font-weight: bold;
     color: black;
 }
+
+.interactive-avatar {
+    width: rem(80px);
+    height: rem(80px);
+    border: rem(6px) solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    &--active {
+        border-color: #365A49;
+    }
+}
+
+.interactive-avatar__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+}
+
+.interactive-avatar__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviews__switcher {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
