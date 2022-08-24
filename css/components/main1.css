@@ -1,20 +1,59 @@
-.flex-container {
-    display: flex;
+.bolls {
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
-.flex1 {
-    width: 100px;
+.boll {
+    background: blanchedalmond;
+    width: 25px;
     height: 25px;
-    background: purple;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    
 }
 
-.flex2 {
-    width: 200px;
-    height: 50px;
-    background: wheat;
+.boll.active {
+    background: rgb(21, 107, 122);
 }
 
-.title {
-    font-size: 20px;
-    color: aquamarine;
+.boll-one {
+    background: rgb(112, 112, 171);
 }
+
+.boll-two {
+    background: rgb(202, 112, 196);
+}
+
+.boll-three {
+    background: rgb(202, 112, 115);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    
+    .button {
+        display: block;
+        background: white;
+        width: 25px;
+        height: 25px;
+        border: 1px solid black;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+.btn {
+    align-items: center;
+    color: blueviolet;
+}
+
+    .button.active {
+        border-color:rgb(21, 107, 122);
+    }
+    
+
